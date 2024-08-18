@@ -47,8 +47,7 @@ public class EmployeeController {
 
     @GetMapping("/getEmployee")
     public Employee getEmployee(@RequestParam int id){
-        Employee employee=employeeService.getEmployeeById(id);
-        return employee;
+        return employeeService.getEmployeeById(id);
     }
 
     @DeleteMapping("/deleteEmployee")
@@ -60,6 +59,7 @@ public class EmployeeController {
     public void updateEmployee(@RequestBody Employee employee){
         employeeService.updateEmployeeById(employee);
     }
+
 
 
 

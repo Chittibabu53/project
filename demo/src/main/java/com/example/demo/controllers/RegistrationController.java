@@ -29,8 +29,7 @@ public class RegistrationController {
 
     @GetMapping
     public  Registration getRegistration(@RequestParam int id){
-        Registration registration1=registrationService.getRegistration(id);
-        return  registration1;
+        return  registrationService.getRegistration(id);
     }
 
     @DeleteMapping
