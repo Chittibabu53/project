@@ -1,7 +1,7 @@
 package com.example.demo.controllers;
 
 
-import com.example.demo.models.Customer;
+
 import com.example.demo.models.Employee;
 import com.example.demo.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,6 +60,7 @@ public class EmployeeController {
     public void updateEmployee(@RequestBody Employee employee){
         employeeService.updateEmployeeById(employee);
     }
+
 
 
 }
