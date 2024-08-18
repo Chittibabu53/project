@@ -1,0 +1,60 @@
+<div class="container">
+    <ngx-datatable
+      class="bootstrap"
+      [rows]="rows"
+      [columns]="columns"
+      [headerHeight]="50"
+      [footerHeight]="50"
+      [rowHeight]="'auto'">
+  
+      <ngx-datatable-column [width]="50">
+        <ng-template ngx-datatable-header-template>
+          <input type="checkbox" (change)="toggleAll($event)" />
+        </ng-template>
+        <ng-template ngx-datatable-cell-template let-row="row">
+          <input type="checkbox" [(ngModel)]="row.selected" />
+        </ng-template>
+      </ngx-datatable-column>
+      
+      <ngx-datatable-column name="Employee ID">
+        <ng-template ngx-datatable-cell-template let-row="row">
+          {{ row.employeeId }}
+        </ng-template>
+      </ngx-datatable-column>
+      
+      <ngx-datatable-column name="Registration Date">
+        <ng-template ngx-datatable-cell-template let-row="row">
+          {{ row.registrationDate }}
+        </ng-template>
+      </ngx-datatable-column>
+
+      <ngx-datatable-column name="EmployeeName">
+        <ng-template ngx-datatable-cell-template let-row="row">
+          {{ row.employeeName }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="JobTitle">
+        <ng-template ngx-datatable-cell-template let-row="row">
+          {{ row.position }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="PhoneNumber">
+        <ng-template ngx-datatable-cell-template let-row="row">
+          {{ row.phoneNo }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Email">
+        <ng-template ngx-datatable-cell-template let-row="row">
+          {{ row.email }}
+        </ng-template>
+      </ngx-datatable-column>
+
+
+
+    </ngx-datatable>
+
+    
+  
+    <button class="btn btn-primary"  (click)="deleteSelected()">Delete Selected</button>
+  </div>
+  

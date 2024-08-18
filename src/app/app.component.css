@@ -1,0 +1,122 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .text-danger {
+    color: #dc3545;
+    font-size: 14px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+
+
+
+
+
+
+  /* Styling for the entire navigation container */
+nav {
+  background-color: #007bff;         /* Primary blue background */
+  padding: 10px 20px;                /* Padding around the navigation */
+  border-radius: 4px;                /* Slightly rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Styling for the unordered list inside the navigation */
+nav ul {
+  list-style-type: none;             /* Removes default list styling */
+  margin: 0;                         /* Removes default margin */
+  padding: 0;                        /* Removes default padding */
+  display: flex;                     /* Flexbox for horizontal alignment */
+  justify-content: space-around;     /* Distribute items evenly */
+}
+
+/* Styling for each list item */
+nav ul li {
+  margin: 0;                         /* No extra margin around list items */
+}
+
+/* Styling for navigation links */
+nav ul li a {
+  text-decoration: none;             /* Removes underline from links */
+  color: #ffffff;                    /* White text color */
+  font-size: 16px;                   /* Set font size */
+  font-weight: 500;                  /* Medium font weight for readability */
+  padding: 8px 16px;                 /* Padding for clickable area */
+  border-radius: 4px;                /* Rounded corners for links */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+/* Styling for active links */
+nav ul li a.active {
+  background-color: #0056b3;         /* Darker blue for active state */
+  color: #ffffff;                    /* Ensure text is white */
+  font-weight: 600;                  /* Bold text for active link */
+}
+
+/* Styling for hover effect on links */
+nav ul li a:hover {
+  background-color: #0056b3;         /* Dark blue background on hover */
+  color: #ffffff;                    /* White text color on hover */
+}
+
+/* Styling for focus state for accessibility */
+nav ul li a:focus {
+  outline: 2px solid #ffffff;        /* White outline for focus */
+  outline-offset: 2px;               /* Space between outline and link */
+}

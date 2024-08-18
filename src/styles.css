@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+/* Customizing Toastr styles */
+
+
+.toast-success {
+    background-color: #28a745 !important; /* Green background */
+    color: #ffffff !important; /* White text */
+  }
+  
+  .toast-error {
+    background-color: #dc3545 !important; /* Red background */
+    color: #ffffff !important; /* White text */
+  }
+  
+  /* Adjusting other toastr classes as needed */
+  .toast-title {
+    font-weight: bold;
+  }
+  
+  .toast-message {
+    font-size: 16px;
+  }
+  

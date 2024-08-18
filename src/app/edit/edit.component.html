@@ -1,0 +1,73 @@
+<div class="container">
+    <ngx-datatable
+      class="bootstrap"
+      [rows]="rows"
+      [columns]="columns"
+      [headerHeight]="50"
+      [footerHeight]="50"
+      [rowHeight]="'auto'">
+  
+      <ngx-datatable-column [width]="50">
+        <ng-template ngx-datatable-header-template>
+          <input type="checkbox" (change)="toggleAll($event)" />
+        </ng-template>
+        <ng-template ngx-datatable-cell-template let-row="row">
+          <input type="checkbox" [(ngModel)]="row.selected" />
+        </ng-template>
+      </ngx-datatable-column>
+  
+      <ngx-datatable-column name="ID">
+        <ng-template ngx-datatable-cell-template let-row="row">
+          {{ row.id }}
+        </ng-template>
+      </ngx-datatable-column>
+  
+      <ngx-datatable-column name="FirstName">
+        <ng-template ngx-datatable-cell-template let-row="row">
+          <input *ngIf="isEditing && row.selected" type="text" [(ngModel)]="row.firstName" />
+          <span *ngIf="!isEditing">{{ row.firstName }}</span>
+        </ng-template>
+      </ngx-datatable-column>
+  
+      <ngx-datatable-column name="LastName">
+        <ng-template ngx-datatable-cell-template let-row="row">
+          <input *ngIf="isEditing && row.selected" type="text" [(ngModel)]="row.lastName" />
+          <span *ngIf="!isEditing">{{ row.lastName }}</span>
+        </ng-template>
+      </ngx-datatable-column>
+  
+      <ngx-datatable-column name="JobTitle">
+        <ng-template ngx-datatable-cell-template let-row="row">
+          <input *ngIf="isEditing && row.selected" type="text" [(ngModel)]="row.jobTitle" />
+          <span *ngIf="!isEditing">{{ row.jobTitle }}</span>
+        </ng-template>
+      </ngx-datatable-column>
+  
+      <ngx-datatable-column name="PhoneNumber">
+        <ng-template ngx-datatable-cell-template let-row="row">
+          <input *ngIf="isEditing && row.selected" type="text" [(ngModel)]="row.phone" />
+          <span *ngIf="!isEditing">{{ row.phone }}</span>
+        </ng-template>
+      </ngx-datatable-column>
+  
+      <ngx-datatable-column name="Comments">
+        <ng-template ngx-datatable-cell-template let-row="row">
+          <input *ngIf="isEditing && row.selected" type="text" [(ngModel)]="row.comments" />
+          <span *ngIf="!isEditing">{{ row.comments }}</span>
+        </ng-template>
+      </ngx-datatable-column>
+  
+      <ngx-datatable-column name="Email">
+        <ng-template ngx-datatable-cell-template let-row="row">
+          <input *ngIf="isEditing && row.selected" type="text" [(ngModel)]="row.email" />
+          <span *ngIf="!isEditing">{{ row.email }}</span>
+        </ng-template>
+      </ngx-datatable-column>
+  
+    </ngx-datatable>
+  
+    <button class="btn btn-primary" (click)="editSelected()">
+      {{ isEditing ? 'Save Changes' : 'Edit Selected' }}
+    </button>
+  </div>
+  

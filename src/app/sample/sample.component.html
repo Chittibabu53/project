@@ -1,0 +1,49 @@
+<form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="customerName">Customer Name:</label>
+      <input id="customerName" formControlName="customerName" />
+      <div *ngIf="orderForm.get('customerName')?.invalid && orderForm.get('customerName')?.touched">
+        Name is required.
+      </div>
+    </div>
+  
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" type="email" formControlName="email" />
+      <div *ngIf="orderForm.get('email')?.invalid && orderForm.get('email')?.touched">
+        A valid email is required.
+      </div>
+    </div>
+  
+    <div>
+      <label for="address">Address:</label>
+      <textarea id="address" formControlName="address"></textarea>
+      <div *ngIf="orderForm.get('address')?.invalid && orderForm.get('address')?.touched">
+        Address is required.
+      </div>
+    </div>
+  
+    <div>
+      <label for="product">Product:</label>
+      <input id="product" formControlName="product" />
+      <div *ngIf="orderForm.get('product')?.invalid && orderForm.get('product')?.touched">
+        Product is required.
+      </div>
+    </div>
+  
+    <div>
+      <label for="quantity">Quantity:</label>
+      <input id="quantity" type="number" formControlName="quantity" />
+      <div *ngIf="orderForm.get('quantity')?.invalid && orderForm.get('quantity')?.touched">
+        Quantity must be at least 1.
+      </div>
+    </div>
+  
+    <div>
+      <label for="specialInstructions">Special Instructions:</label>
+      <textarea id="specialInstructions" formControlName="specialInstructions"></textarea>
+    </div>
+  
+    <button type="submit" [disabled]="orderForm.invalid">Submit Order</button>
+  </form>
+  

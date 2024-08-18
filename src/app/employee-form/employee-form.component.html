@@ -1,0 +1,39 @@
+<div class="container">
+    <h2>Employee Registration</h2>
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="employeeName">Name</label>
+        <input id="employeeName" formControlName="employeeName" class="form-control" />
+        <div *ngIf="employeeForm.get('employeeName')?.invalid && employeeForm.get('employeeName')?.touched">
+          Name is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" class="form-control" />
+        <div *ngIf="employeeForm.get('email')?.invalid && employeeForm.get('email')?.touched">
+          Valid email is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="position">Position</label>
+        <input id="position" formControlName="position" class="form-control" />
+        <div *ngIf="employeeForm.get('position')?.invalid && employeeForm.get('position')?.touched">
+          Position is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="phoneNo">Phone Number</label>
+        <input id="phoneNo" formControlName="phoneNo" class="form-control" />
+        <div *ngIf="employeeForm.get('phoneNo')?.invalid && employeeForm.get('phoneNo')?.touched">
+          Phone number is required.
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="employeeForm.invalid">Submit</button>
+    </form>
+  </div>
+  

@@ -1,41 +1,24 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
-import { CustomerService } from './customer.service'; // Adjust the path if necessary
-import { ToastrService } from 'ngx-toastr'; // Import ToastrService
-import { Router } from '@angular/router';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CustomerService } from '../customer.service';
+import { ToastrService } from 'ngx-toastr';
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-submit',
+  templateUrl: './submit.component.html',
+  styleUrl: './submit.component.css'
 })
-export class AppComponent {
-  title = 'sampleprojectangular';
+export class SubmitComponent {
+
+
+  title = 'Person Details';
   customerForm: FormGroup;
-  isSubmitting = false; // Flag to prevent multiple submissions
-
-  currentComponent: string = 'home'; // Default component
-
-  showComponent(componentName: string): void {
-    this.currentComponent = componentName;
-  }
-
-
-  // isLoggedIn(): boolean {
-  //   return !!localStorage.getItem('jwt');
-  // }
-
-  // logout(): void {
-  //   localStorage.removeItem('jwt');
-  //   this.router.navigate(['/login']);
-  // }
-
-
+  isSubmitting = false;
 
 
   constructor(
     private fb: FormBuilder,
     private customerService: CustomerService,
-    private router:Router,
     private toastr: ToastrService // Inject ToastrService
   ) {
     this.customerForm = this.fb.group({

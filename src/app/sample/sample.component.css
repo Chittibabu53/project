@@ -1,0 +1,65 @@
+/* Style for the form container */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Style for form labels */
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  /* Style for input and textarea elements */
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Style for input fields */
+  input[type="number"] {
+    -moz-appearance: textfield; /* Hides the spinner in number input on Firefox */
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Style for error messages */
+  div {
+    color: red;
+    font-size: 0.875em;
+  }
+  
+  /* Style for the submit button */
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Style for the submit button on hover */
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Optional: Style for form group container */
+  div {
+    margin-bottom: 16px;
+  }
+  
