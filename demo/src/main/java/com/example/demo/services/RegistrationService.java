@@ -6,6 +6,8 @@ import com.example.demo.repository.RegistrationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class RegistrationService {
 
@@ -20,4 +22,6 @@ public class RegistrationService {
     public  Registration getRegistration(int id){
         return  registrationRepository.findById(id).orElse(null);
     }
+
+
 }

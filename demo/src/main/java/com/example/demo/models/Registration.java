@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-import java.sql.Date;
 
 @Entity
 @Table(name = "Registration")
@@ -17,9 +16,9 @@ public class Registration {
     @Column(name = "reg_id")
     private int regId;
 
-    @ManyToOne
-    @JoinColumn(name = "emp_id", nullable = false)
-    private Employee employee;
+//    @ManyToOne
+//    @JoinColumn(name = "emp_id", nullable = false)
+//    private Employee employee;
 
 //    @Column(name = "registration_date")
 //    private Date registrationDate;
@@ -44,13 +43,13 @@ public class Registration {
         this.regId = regId;
     }
 
-    public Employee getEmployee() {
-        return employee;
-    }
-
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
+//    public Employee getEmployee() {
+//        return employee;
+//    }
+//
+//    public void setEmployee(Employee employee) {
+//        this.employee = employee;
+//    }
 
 //    public Date getRegistrationDate() {
 //        return registrationDate;
