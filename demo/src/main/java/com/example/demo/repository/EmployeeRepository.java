@@ -97,7 +97,7 @@ public interface EmployeeRepository extends JpaRepository<Employee,Integer> {
                     FROM projects p2
                     JOIN employee_table e2 ON p2.projectid = e2.project_id
                     WHERE e2.department_id = d.department_id
-                );  
+                );
             """,nativeQuery = true)
     List<EmployeeDepartmentDTO> getExpensiveProject();
 

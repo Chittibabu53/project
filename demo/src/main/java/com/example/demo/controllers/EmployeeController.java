@@ -93,6 +93,7 @@ public class EmployeeController {
        return new ResponseEntity<>(employee,HttpStatus.OK);
     }
 
+
     @GetMapping("/getDepartmentName")
     public List<EmployeeDepartmentDTO> getDepartmentName(){
        try{
@@ -121,6 +122,16 @@ public class EmployeeController {
         }
         catch (Exception e){
             throw new RuntimeException("An error occurred while fetching expensive projects.",e);
+        }
+    }
+
+    @GetMapping("/getCountOfProjects")
+    public List<EmployeeDepartmentDTO> getCountOfProjects() {
+        try{
+            return employeeRepository.getCountOfProjects();
+        }
+        catch (Exception e){
+            throw new RuntimeException("An error occurred while fetching count of projects.",e);
         }
     }
 
